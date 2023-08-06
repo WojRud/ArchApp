@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/enterNameFragment">
+
+    <fragment
+        android:id="@+id/enterNameFragment"
+        android:name="com.example.basefragmentmvvm.createNewAccount.EnterNameFragment"
+        android:label="fragment_entername"
+        tools:layout="@layout/fragment_entername" >
+        <action
+            android:id="@+id/action_enterNameFragment_to_enterLastNameFragment"
+            app:destination="@id/enterLastNameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/enterLastNameFragment"
+        android:name="com.example.basefragmentmvvm.createNewAccount.EnterLastNameFragment"
+        android:label="fragment_enterlastname"
+        tools:layout="@layout/fragment_enterlastname" >
+        <action
+            android:id="@+id/action_enterLastNameFragment_to_enterAgeFragment"
+            app:destination="@id/enterAgeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/enterAgeFragment"
+        android:name="com.example.basefragmentmvvm.createNewAccount.EnterAgeFragment"
+        android:label="fragment_enterage"
+        tools:layout="@layout/fragment_enterage" >
+        <action
+            android:id="@+id/action_enterAgeFragment_to_showDataFragment"
+            app:destination="@id/showDataFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/showDataFragment"
+        android:name="com.example.basefragmentmvvm.createNewAccount.ShowDataFragment"
+        android:label="fragment_showdata"
+        tools:layout="@layout/fragment_showdata" >
+        <action
+            android:id="@+id/action_showDataFragment_to_enterNameFragment"
+            app:destination="@id/enterNameFragment" />
+    </fragment>
+</navigation>
